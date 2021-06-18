@@ -1,14 +1,3 @@
-// document.addEventListener('DOMContentLoaded', () => document.querySelectorAll('div[is]').forEach(el => {
-//   try {
-//     const newEl = document.createElement(el.getAttribute('is'));
-//     [...el.attributes].forEach(at => newEl.setAttribute(at.name, at.value));
-//     newEl.innerHTML = el.innerHTML;
-//     el.replaceWith(newEl);
-//   } catch (error) {
-//     console.error(`Cannot convert element: ${el.outerHTML}`);
-//   }
-// }));
-
 document.addEventListener('DOMContentLoaded', () => {
   let els = document.querySelectorAll('div[is]');
   do {
