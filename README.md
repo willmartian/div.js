@@ -1,4 +1,4 @@
-# div.js
+# 🤠 div.js 🤠
 HTML, the web's most popular programming language, is bloated.
 
 As of 2021, there are at least *10* HTML elements. Why? Why waste time use semantic when div do trick?
