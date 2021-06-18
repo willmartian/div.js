@@ -11,7 +11,12 @@ const swapDivs = (els) => {
   els.forEach(el => {
     try {
       const newEl = document.createElement(el.getAttribute('is'));
-      [...el.attributes].forEach(at => newEl.setAttribute(at.name, at.value));
+      [...el.attributes].forEach(at => 
+        // avoid the endless loop of <div is="div"></div>
+        !(at.name === 'is' && at.value === 'div')
+        ? newEl.setAttribute(at.name, at.value)
+        : void 0
+      );
       newEl.innerHTML = el.innerHTML;
       el.replaceWith(newEl);
     } catch (error) {
